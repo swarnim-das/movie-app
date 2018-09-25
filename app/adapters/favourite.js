@@ -9,7 +9,7 @@ export default DS.RESTAdapter.extend({
   createRecord(store, type, snapshot ){
     let data = this.serialize(snapshot, {includeId: true});
     //console.log(snapshot.modelName);
-     debugger;
+
       return new Promise(function (resolve, reject)  {
           Em.$.ajax({
              type: "POST",
@@ -35,7 +35,7 @@ export default DS.RESTAdapter.extend({
       })
   },
   buildURL(modelName, id, snapshot, requestType, query) {
-    debugger;
+
     return `${this.host}/${this.namespace}`
   }
 });

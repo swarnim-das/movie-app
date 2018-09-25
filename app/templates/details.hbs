@@ -1,5 +1,28 @@
-<img src="http://image.tmdb.org/t/p/w342/{{model.poster_path}}"
-     style="width: 150px; height: 150px">
-<p>TITLE:{{model.title}}</p>
-<p>RELEASE:{{model.release_date}}</p>
-<p>POPULARITY:{{model.popularity}}</p>
+{{outlet}}
+
+
+{{#paper-card as |card|}}
+
+  {{#card.content class="layout-row layout-align-space-between"}}
+    {{#card.media}}
+      <div class="card-media">
+        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{model.poster_path}}" alt="Image" title={{model.title}} style="width:300px;height:300px">
+      </div>
+    {{/card.media}}
+    {{#card.content}}
+      <p>
+        Title: {{model.title}}
+      </p>
+      Release Date: {{model.release_date}}<br>
+      <p>
+        Popularity: {{model.popularity}}
+      </p>
+      <p>Overview: {{model.overview}}</p>
+    {{/card.content}}
+  {{/card.content}}
+  {{#card.actions class="layout-column"}}
+    {{#paper-button}}Add to Favourites{{/paper-button}}
+    {{#paper-button}}Delete{{/paper-button}}
+  {{/card.actions}}
+
+{{/paper-card}}
