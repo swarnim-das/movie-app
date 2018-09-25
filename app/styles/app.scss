@@ -1,0 +1,15 @@
+@import 'ember-paper';
+
+.home_button{
+  padding-left: 10px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  //padding: 10px;
+  margin: 30px;
+}
+h2{
+  color: gray;
+}

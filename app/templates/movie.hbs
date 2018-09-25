@@ -1,0 +1,39 @@
+<h2 style="margin:20px">Trending</h2>
+<div class="container">
+  {{#each model.trending as |movie|}}
+
+    {{#paper-card as |card|}}
+
+      <img {{action "transitionToDetails" movie}}
+        src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"
+        style="width:20vw; height:50vh" alt="" title={{movie.title}} />
+
+      {{#paper-button raised=true primary=true onClick=(action 'addToFavourites' movie)}}Add to Favourites{{/paper-button}}
+
+    {{/paper-card}}
+
+  {{/each}}
+
+</div>
+
+<h2 style="margin:20px">Upcoming</h2>
+<div class="container">
+  {{#each model.upcoming as |x|}}
+
+    {{#paper-card as |card|}}
+
+      <img {{action "transitionToDetails" x}}
+        src="https://image.tmdb.org/t/p/w500/{{x.poster_path}}"
+        style="width:20vw; height:50vh" alt="" title={{x.title}} />
+
+      {{#paper-button raised=true primary=true}}Add to Favourites{{/paper-button}}
+
+    {{/paper-card}}
+
+  {{/each}}
+
+</div>
+
+{{outlet}}
+
+
