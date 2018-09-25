@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('movie');
   this.route('details', {path: '/details/:id'});
   this.route('favourite');
+  this.route('myfavourite');
 });
 
 export default Router;

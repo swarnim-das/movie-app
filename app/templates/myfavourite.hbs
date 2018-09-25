@@ -1,0 +1,13 @@
+{{outlet}}
+
+{{#each model as |movie|}}
+  {{#paper-card as |card|}}
+
+    <img {{action "transitionToDetails" movie}}
+      src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"
+      style="width:20vw; height:50vh" alt=""/>
+
+    {{#paper-button raised=true primary=true onClick=(action 'deleteFavourites' movie)}}Delete from Favourites{{/paper-button}}
+
+  {{/paper-card}}
+{{/each}}
