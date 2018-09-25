@@ -18,12 +18,32 @@ export default DS.RESTAdapter.extend({
              url: `http://localhost:3000/favourites`,
              success: {
                200: {
-                 
+
                }
              }
 
           })
       })
+  },
+
+  deleteRecord(store, type, snapshot ){
+    let data = this.serialize(snapshot);
+    //console.log(snapshot.modelName);
+
+    return new Promise(function (resolve, reject)  {
+      Em.$.ajax({
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(data),
+        url: `http://localhost:3000/favourites`,
+        success: {
+          200: {
+
+          }
+        }
+
+      })
+    })
   },
   // createRecord(store, type, snapshot) {
   //   let data = this.serialize(snapshot);
