@@ -1,3 +1,28 @@
 {
-  "favourites": []
+  "favourites": [
+    {
+      "poster_path": "/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
+      "id": 1
+    },
+    {
+      "poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "id": 2
+    },
+    {
+      "poster_path": "/lxXsGqxUwSxypffv8hn3r332jf4.jpg",
+      "id": 3
+    },
+    {
+      "poster_path": "/2slvblTroiT1lY9bYLK7Amigo1k.jpg",
+      "id": 4
+    },
+    {
+      "poster_path": "/MvYpKlpFukTivnlBhizGbkAe3v.jpg",
+      "id": 5
+    },
+    {
+      "poster_path": "/eyWICPcxOuTcDDDbTMOZawoOn8d.jpg",
+      "id": 6
+    }
+  ]
 }
