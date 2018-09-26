@@ -5,7 +5,9 @@ export default Controller.extend({
     addToFavourites(movie) {
       let favourite = this.store.createRecord('favourite', {
         id: movie.get('id'),
-        poster_path : movie.get('poster_path')
+        poster_path : movie.get('poster_path'),
+        title: movie.get('title'),
+        overview: movie.get('overview')
       });
       favourite.save();
     }
