@@ -7,11 +7,13 @@
 </p>
 <p>
 
-  {{#each model as |movie|}}
-    {{#paper-card}}
-    <img
-      src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"
-      style="width:20vw; height:50vh" alt="" title={{movie.title}}/>
-    {{/paper-card}}
+  {{#each obj as |s|}}
+
+
+      <img
+        src="https://image.tmdb.org/t/p/w500/{{s.poster_path}}"
+        style="width:20vw; height:50vh" alt="" title={{s.title}}/>
+
   {{/each}}
+
 </p>
