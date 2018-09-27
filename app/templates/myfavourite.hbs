@@ -4,7 +4,7 @@
   {{#each model as |movie|}}
     {{#paper-card as |card|}}
 
-      <img {{action "transitionToDetails" movie}}
+      <img
         src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"
         style="width:20vw; height:50vh" alt=""/>
 

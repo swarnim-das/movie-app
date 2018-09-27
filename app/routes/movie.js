@@ -12,8 +12,9 @@ export default Route.extend({
   },
   actions : {
     transitionToDetails(movie) {
+      console.log(movie.constructor.modelName);
       //console.log(movie.get("id"));
-      this.transitionTo("details", movie.get("id"));
+      this.transitionTo("details", movie.get('id'), {queryParams: {modelName: movie.constructor.modelName}});
     }
   },
   setupController (controller, model)  {

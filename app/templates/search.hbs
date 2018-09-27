@@ -1,0 +1,17 @@
+{{outlet}}
+<p>
+<center>
+  {{paper-input label="Movie Name" value=name onChange=(action (mut name))}}
+  {{#paper-button iconButton=true onClick=(action 'search_movie' name) }}{{paper-icon "search"}}{{/paper-button}}
+</center>
+</p>
+<p>
+
+  {{#each model as |movie|}}
+    {{#paper-card}}
+    <img
+      src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}"
+      style="width:20vw; height:50vh" alt="" title={{movie.title}}/>
+    {{/paper-card}}
+  {{/each}}
+</p>
